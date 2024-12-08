@@ -7,7 +7,7 @@ metadata:
   labels:
     helm.sh/chart: ui-0.1.0
     app.kubernetes.io/name: ui
-    app.kubernetes.io/instance: tntk-io
+    app.kubernetes.io/instance: demoapp
     app.kubernetes.io/version: "1.16.0"
     app.kubernetes.io/managed-by: Helm
 spec:
@@ -15,12 +15,12 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: ui
-      app.kubernetes.io/instance: tntk-io
+      app.kubernetes.io/instance: demoapp
   template:
     metadata:
       labels:
         app.kubernetes.io/name: ui
-        app.kubernetes.io/instance: tntk-io
+        app.kubernetes.io/instance: demoapp
     spec:
       serviceAccountName: default
       securityContext:
@@ -32,7 +32,7 @@ spec:
                 name: ui
           securityContext:
             {}
-          image: "360927760300.dkr.ecr.us-east-1.amazonaws.com/prod/ui:286901bf"
+          image: "360927760300.dkr.ecr.us-east-1.amazonaws.com/prod/ui:20257fa2"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
